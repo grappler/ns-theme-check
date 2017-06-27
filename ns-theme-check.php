@@ -18,6 +18,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+if ( defined('PHP_MAJOR_VERSION') && PHP_MAJOR_VERSION <= 5.2 ) {
+	deactivate_plugins( plugin_basename( __FILE__ ) );
+	$error_message = '<p style="font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Oxygen-Sans,Ubuntu,Cantarell,\'Helvetica Neue\',sans-serif;font-size: 13px;line-height: 1.5;color:#444;">' . esc_html__( 'This plugin requires php version greater than 5.2.', 'ns-theme-check' ) . '</p>';
+		die( $error_message ); // WPCS: XSS ok.
+}
+
 define( 'NS_THEME_CHECK_BASENAME', plugin_basename( __FILE__ ) );
 define( 'NS_THEME_CHECK_DIR', rtrim( plugin_dir_path( __FILE__ ), '/' ) );
 define( 'NS_THEME_CHECK_URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
