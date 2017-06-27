@@ -17,27 +17,27 @@ function ns_theme_check_get_standards() {
 	$output = array(
 		'wordpress-theme' => array(
 			'label'       => 'WordPress-Theme',
-			'description' => __( 'Ruleset for WordPress theme review requirements (Required)', 'ns-theme-check' ),
+			'description' => 'Ruleset for WordPress theme review requirements (Required)',
 			'default'     => 1,
 		),
 		'wordpress-core' => array(
 			'label'       => 'WordPress-Core',
-			'description' => __( 'Main ruleset for WordPress core coding standards (Optional)', 'ns-theme-check' ),
+			'description' => 'Main ruleset for WordPress core coding standards (Optional)',
 			'default'     => 0,
 		),
 		'wordpress-extra' => array(
 			'label'       => 'WordPress-Extra',
-			'description' => __( 'Extended ruleset for recommended best practices (Optional)', 'ns-theme-check' ),
+			'description' => 'Extended ruleset for recommended best practices (Optional)',
 			'default'     => 0,
 		),
 		'wordpress-docs' => array(
 			'label'       => 'WordPress-Docs',
-			'description' => __( 'Additional ruleset for WordPress inline documentation standards (Optional)', 'ns-theme-check' ),
+			'description' => 'Additional ruleset for WordPress inline documentation standards (Optional)',
 			'default'     => 0,
 		),
 		'wordpress-vip' => array(
 			'label'       => 'WordPress-VIP',
-			'description' => __( 'Extended ruleset for WordPress VIP coding requirements (Optional)', 'ns-theme-check' ),
+			'description' => 'Extended ruleset for WordPress VIP coding requirements (Optional)',
 			'default'     => 0,
 		),
 	);
